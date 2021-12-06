@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { variables } from '../../../styleConfig/variables';
 
-export const StyledSidebar = styled.aside`
+export const StyledMain = styled.main`
   height: 100%;
-  flex: 2;
+  flex: 10;
   border: 1px solid ${variables.colorBorder};
 `;

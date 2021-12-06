@@ -1,5 +1,6 @@
+import { FC } from 'react';
 import { StyledSidebar } from './styledSidebar';
 
-const Sidebar = () => <StyledSidebar></StyledSidebar>;
+const Sidebar: FC = ({ children }) => <StyledSidebar>{children}</StyledSidebar>;
 
 export default Sidebar;
