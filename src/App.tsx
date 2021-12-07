@@ -1,7 +1,8 @@
 import { applyMiddleware, createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
-import reducers, { ApplicationState } from './reducers';
+import reducers from './reducers';
 import { ResetCss } from './styleConfig/reset';
 import { BasicStyles } from './styleConfig/basic-styles';
 import { Dashboard } from './views';
@@ -12,7 +13,7 @@ export const store = createStoreWithMiddleware(reducers as any);
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <ResetCss />
       <BasicStyles />
       <Router>
@@ -21,7 +22,7 @@ const App = () => {
           <Route render={() => <Redirect to="/error" />} />
         </Switch>
       </Router>
-    </>
+    </Provider>
   );
 };
 
