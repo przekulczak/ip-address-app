@@ -25,6 +25,7 @@
         "endOfLine": "auto"
       }
     ],
+    "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/jsx-one-expression-per-line": "off",
     "no-use-before-define": "off",
@@ -32,6 +33,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
+    "default-param-last": "off",
     "react/jsx-filename-extension": [
       1,
       {
