@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore } from 'redux';
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
-import reducers from './reducers';
+import reducers, { ApplicationState } from './reducers';
 import { ResetCss } from './styleConfig/reset';
 import { BasicStyles } from './styleConfig/basic-styles';
 import { Dashboard } from './views';

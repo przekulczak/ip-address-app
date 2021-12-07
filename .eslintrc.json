@@ -26,6 +26,7 @@
       }
     ],
     "react/jsx-props-no-spreading": "off",
+    "no-useless-escape": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/jsx-one-expression-per-line": "off",
     "no-use-before-define": "off",

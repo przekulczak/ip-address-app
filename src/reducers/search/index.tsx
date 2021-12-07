@@ -3,7 +3,7 @@ import { LocationResponse } from '../../types/locationType';
 const GET_LOCATION = 'GET_LOCATION';
 const LOADING_LOCATION = 'LOADING_LOCATION';
 
-export { GET_LOCATION };
+export { GET_LOCATION, LOADING_LOCATION };
 
 interface GetLocation {
   type: 'GET_LOCATION';
@@ -12,7 +12,7 @@ interface GetLocation {
 
 interface LoadingLocation {
   type: 'LOADING_LOCATION';
-  payload: LocationResponse;
+  payload: boolean;
 }
 
 export interface SearchStateType {
@@ -27,12 +27,12 @@ const initialState: SearchStateType = {
 
 type Action = GetLocation | LoadingLocation;
 
-export default (state = initialState, action: Action) => {
+export default (state = initialState, action: Action): SearchStateType => {
   switch (action.type) {
     case GET_LOCATION:
-      return { ...state, currentUserData: action.payload };
+      return { ...state, location: action.payload };
     case LOADING_LOCATION:
-      return { ...state, currentUserData: action.payload };
+      return { ...state, loading: action.payload };
     default:
       return state;
   }

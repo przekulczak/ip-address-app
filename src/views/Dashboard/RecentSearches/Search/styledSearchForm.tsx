@@ -5,4 +5,4 @@ export const StyledSearchForm = styled.form`
   display: flex;
 `;
 
-export const StyledSearchInput = styled.input``;
+export const StyledSearchButton = styled.button``;
