@@ -1,17 +1,17 @@
 import { Dispatch } from 'redux';
+import { LoadingActionsType } from '../reducers/loading/types';
 import axiosInstance from './axiosConfig';
 
 export interface GetDataType {
   dispatch: Dispatch;
-  loadingAction: string;
   actionName: string;
   url: string;
 }
 
-export const getData = ({ dispatch, loadingAction, actionName, url }: GetDataType) => {
-  console.log('HEHE');
-  dispatch({ type: loadingAction, payload: true });
-  axiosInstance(`/${url}`)
+export const getData = ({ dispatch, actionName, url }: GetDataType) => {
+  dispatch({ type: LoadingActionsType.SET_LOADING, payload: true });
+  axiosInstance
+    .get(`/${url}`)
     .then((response: any) => {
       dispatch({
         type: actionName,
@@ -19,9 +19,10 @@ export const getData = ({ dispatch, loadingAction, actionName, url }: GetDataTyp
       });
     })
     .catch((response: any) => {
+      // to do handle api error
       console.log(response);
     })
     .then(() => {
-      dispatch({ type: loadingAction, payload: false });
+      dispatch({ type: LoadingActionsType.SET_LOADING, payload: false });
     });
 };

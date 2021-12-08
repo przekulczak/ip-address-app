@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { StyledSearchForm, StyledSearchButton } from './styledSearchForm';
 import { SearchReqType } from '../../../../types/searchReqType';
 import { addToHistory } from '../../../../actions/history';
-import { getLocation } from '../../../../actions/searches';
+import { searchLocation } from '../../../../actions/location';
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const Search = () => {
     console.log('SUBMIT');
     const { search } = data;
     dispatch(addToHistory(search));
-    dispatch(getLocation(search));
+    dispatch(searchLocation(search));
   };
   const ipRegex = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)(\.(?!$)|$)){4}$/;
   const urlRegex =

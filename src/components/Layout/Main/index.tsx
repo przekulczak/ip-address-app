@@ -1,6 +1,14 @@
 import { FC } from 'react';
+import Spinner from '../../Common/Spinner';
 import { StyledMain } from './styledMain';
 
-const Main: FC = ({ children }) => <StyledMain>{children}</StyledMain>;
+interface Props {
+  children: React.ReactNode;
+  isLoading: boolean;
+}
+
+const Main: FC<Props> = ({ children, isLoading }: Props) => (
+  <StyledMain>{isLoading ? <Spinner /> : children}</StyledMain>
+);
 
 export default Main;

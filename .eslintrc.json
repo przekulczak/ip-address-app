@@ -26,6 +26,9 @@
       }
     ],
     "react/jsx-props-no-spreading": "off",
+    "camelcase": "off",
+    "no-shadow": "off",
+    "spaced-comment": "off",
     "no-param-reassign": "off",
     "react/jsx-no-useless-fragment": "off",
     "no-useless-escape": "off",
