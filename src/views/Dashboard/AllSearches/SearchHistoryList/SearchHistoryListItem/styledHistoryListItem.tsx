@@ -9,6 +9,9 @@ export const StyledHistoryListItem = styled.button`
   padding: ${variables.mainSpacing};
   font-size: 1rem;
   border: none;
+  display: flex;
+  border-bottom: 1px solid ${variables.colorBorder};
+  width: 100%;
 
   :hover {
     text-decoration: underline;

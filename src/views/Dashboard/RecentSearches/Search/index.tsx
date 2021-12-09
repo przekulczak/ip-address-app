@@ -7,6 +7,7 @@ import {
   StyledSearchInput,
   StyledSearchIcon,
   StyledLabel,
+  SearchParagraph,
 } from './styledSearchForm';
 import { SearchReqType } from '../../../../types/searchReqType';
 import { addToHistory } from '../../../../actions/history';
@@ -29,7 +30,8 @@ const Search = () => {
 
   return (
     <SearchContainer>
-      <StyledLabel>Search</StyledLabel>
+      <Header text="Search" />
+
       <StyledSearchForm onSubmit={handleSubmit(onSubmit)}>
         <StyledSearchInput
           {...register('search', {
@@ -40,6 +42,9 @@ const Search = () => {
           <StyledSearchIcon />
         </StyledSearchButton>
       </StyledSearchForm>
+      <SearchParagraph>
+        Queries in www.*example*.com, *exmaple*.com format and ip addresses are accepted.
+      </SearchParagraph>
     </SearchContainer>
   );
 };

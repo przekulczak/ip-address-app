@@ -22,3 +22,7 @@ export const StyledSearchIcon = styled(SearchAlt)`
 export const StyledLabel = styled.label`
   padding: ${variables.bigSpacing};
 `;
+
+export const SearchParagraph = styled.p`
+  margin-top: ${variables.mainSpacing};
+`;

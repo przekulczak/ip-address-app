@@ -6,8 +6,8 @@ import SearchMap from './SearchMap';
 import SearchResult from './SearchResult';
 
 const CurrentSearch = () => {
-  const searchHistory = useSelector((state: ApplicationState) => state.location.searchLocation);
-  if (!searchHistory) return null;
+  const searchLocation = useSelector((state: ApplicationState) => state.location.searchLocation);
+  if (!searchLocation) return null;
   return (
     <ResultContainer>
       <SearchResult />

@@ -5,5 +5,4 @@ export const StyledResultInnerContainer = styled.div<{ flex?: string; height?: s
   background: ${variables.colorBackgroundBox};
   flex: ${(props) => props.flex || 1};
   padding: ${variables.mainSpacing};
-  margin: ${variables.mainSpacing};
 `;

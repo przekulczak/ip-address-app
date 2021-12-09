@@ -6,5 +6,4 @@ export const StyledResultContainer = styled.section`
   background: ${variables.colorBackgroundBox};
   padding: ${variables.mainSpacing};
   border-radius: ${variables.mainSpacing};
-  margin: ${variables.mainSpacing};
 `;

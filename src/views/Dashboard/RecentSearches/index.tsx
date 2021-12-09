@@ -9,6 +9,7 @@ const AllSearches: FC = () => {
     <Main>
       <CurrentLocation />
       <Search />
+
       <CurrentSearch />
     </Main>
   );
