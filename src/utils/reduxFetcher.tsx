@@ -1,6 +1,8 @@
 import { Dispatch } from 'redux';
+import historyReducer from '../reducers/history';
 import { LoadingActionsType } from '../reducers/loading/types';
 import axiosInstance from './axiosConfig';
+import { history } from '../App';
 
 export interface GetDataType {
   dispatch: Dispatch;
@@ -12,13 +14,17 @@ export const getData = ({ dispatch, actionName, url }: GetDataType) => {
   dispatch({ type: LoadingActionsType.SET_LOADING, payload: true });
   axiosInstance
     .get(`/${url}`)
-    .then((response: any) => {
-      dispatch({
-        type: actionName,
-        payload: response.data,
-      });
+    .then((response) => {
+      if (response.data.success === false) {
+        history.push('/error');
+      } else {
+        dispatch({
+          type: actionName,
+          payload: response.data,
+        });
+      }
     })
-    .catch((response: any) => {
+    .catch((response) => {
       // to do handle api error
       console.log(response);
     })

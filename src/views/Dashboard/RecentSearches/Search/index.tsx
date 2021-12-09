@@ -1,16 +1,23 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { StyledSearchForm, StyledSearchButton } from './styledSearchForm';
+import Header from '../../../../components/Common/Header';
+import {
+  StyledSearchForm,
+  StyledSearchButton,
+  StyledSearchInput,
+  StyledSearchIcon,
+  StyledLabel,
+} from './styledSearchForm';
 import { SearchReqType } from '../../../../types/searchReqType';
 import { addToHistory } from '../../../../actions/history';
 import { searchLocation } from '../../../../actions/location';
+import SearchContainer from '../../../../components/Layout/SearchContainer';
 
 const Search = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   // TO DO MOVE TO HOOK
   const onSubmit = (data: SearchReqType) => {
-    console.log('SUBMIT');
     const { search } = data;
     dispatch(addToHistory(search));
     dispatch(searchLocation(search));
@@ -21,15 +28,19 @@ const Search = () => {
   const validation = (value: string) => ipRegex.test(value) || urlRegex.test(value);
 
   return (
-    <StyledSearchForm onSubmit={handleSubmit(onSubmit)}>
-      {console.log('BASE URL', process.env.REACT_APP_BASE_URL)}
-      <input
-        {...register('search', {
-          // validate: validation,
-        })}
-      />
-      <StyledSearchButton type="button">Search</StyledSearchButton>
-    </StyledSearchForm>
+    <SearchContainer>
+      <StyledLabel>Search</StyledLabel>
+      <StyledSearchForm onSubmit={handleSubmit(onSubmit)}>
+        <StyledSearchInput
+          {...register('search', {
+            // validate: validation,
+          })}
+        />
+        <StyledSearchButton type="button">
+          <StyledSearchIcon />
+        </StyledSearchButton>
+      </StyledSearchForm>
+    </SearchContainer>
   );
 };
 

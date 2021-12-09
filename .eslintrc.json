@@ -25,6 +25,8 @@
         "endOfLine": "auto"
       }
     ],
+    "import/no-extraneous-dependencies": "off",
+    "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
     "camelcase": "off",
     "no-shadow": "off",

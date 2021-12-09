@@ -1,4 +1,3 @@
-import { useDispatch } from 'react-redux';
 import { StyledHistoryListItem } from './styledHistoryListItem';
 
 interface Props {
@@ -6,7 +5,6 @@ interface Props {
 }
 
 const SearchHistoryListItem = ({ query }: Props) => {
-  const dispatch = useDispatch();
   return <StyledHistoryListItem>{query}</StyledHistoryListItem>;
 };
 

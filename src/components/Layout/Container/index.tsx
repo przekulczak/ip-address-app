@@ -1,17 +1,18 @@
-import { FC } from 'react';
-import { useSelector } from 'react-redux';
+import { FC, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getUsersLocation } from '../../../actions/location';
 import { ApplicationState } from '../../../reducers';
 import Spinner from '../../Common/Spinner';
 import { StyledContainer } from './styledContainer';
 
 const Container: FC = ({ children }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUsersLocation());
+  }, []);
   const loading = useSelector((state: ApplicationState) => state.loading.loading);
-  return (
-    <StyledContainer>
-      {loading && <Spinner />}
-      {children}
-    </StyledContainer>
-  );
+  const currentContent = loading ? <Spinner /> : children;
+  return <StyledContainer>{currentContent}</StyledContainer>;
 };
 
 export default Container;

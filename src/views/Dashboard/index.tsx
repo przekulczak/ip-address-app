@@ -4,12 +4,10 @@ import RecentSearches from './RecentSearches';
 
 const Dashboard = () => {
   return (
-    <>
-      <Container>
-        <AllSearches />
-        <RecentSearches />
-      </Container>
-    </>
+    <Container>
+      <AllSearches />
+      <RecentSearches />
+    </Container>
   );
 };
 

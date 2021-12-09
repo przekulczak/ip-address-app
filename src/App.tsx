@@ -1,11 +1,14 @@
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route, Router } from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
+import { createBrowserHistory } from 'history';
 import reducers from './reducers';
 import { ResetCss } from './styleConfig/reset';
 import { BasicStyles } from './styleConfig/basic-styles';
-import { Dashboard } from './views';
+import { Dashboard, Error } from './views';
+
+export const history = createBrowserHistory({ basename: '/' });
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 // TO DO FIX TYPE
@@ -16,10 +19,10 @@ const App = () => {
     <Provider store={store}>
       <ResetCss />
       <BasicStyles />
-      <Router>
+      <Router history={history}>
         <Switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route render={() => <Redirect to="/error" />} />
+          <Route exact path="/error" component={Error} />
+          <Route path="/" component={Dashboard} />
         </Switch>
       </Router>
     </Provider>
