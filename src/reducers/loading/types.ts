@@ -9,3 +9,5 @@ export interface SetLoading {
 export interface LoadingStateType {
   loading: boolean;
 }
+
+export type LoadingAction = SetLoading;

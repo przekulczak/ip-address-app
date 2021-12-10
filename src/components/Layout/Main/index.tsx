@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { ApplicationState } from '../../../reducers';
+import { ApplicationState } from '../../../reducers/types';
 import { StyledMain } from './styledMain';
 
 const Main: FC = ({ children }) => {

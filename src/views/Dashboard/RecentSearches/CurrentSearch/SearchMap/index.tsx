@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import ResultInnerContainer from '../../../../../components/Layout/ResultContainer/ResultInnerContainer';
 import Map from '../../../../../components/Common/Map';
-import { ApplicationState } from '../../../../../reducers';
+import { ApplicationState } from '../../../../../reducers/types';
 
 const SearchMap = () => {
   const position = useSelector((state: ApplicationState) => state.location.searchLocation);

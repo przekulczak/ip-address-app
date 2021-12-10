@@ -1,11 +1,4 @@
-import {
-  LocationActionsType,
-  SearchLocation,
-  LoadingSearchLocation,
-  GetUsersLocation,
-  LoadingUsersLocation,
-  LocationStateType,
-} from './types';
+import { LocationActionsType, LocationAction, LocationStateType } from './types';
 
 const initialState: LocationStateType = {
   usersLocation: null,
@@ -14,9 +7,7 @@ const initialState: LocationStateType = {
   loadingSearchLocation: false,
 };
 
-type Action = SearchLocation | LoadingSearchLocation | LoadingUsersLocation | GetUsersLocation;
-
-export default (state = initialState, action: Action): LocationStateType => {
+export default (state = initialState, action: LocationAction): LocationStateType => {
   switch (action.type) {
     case LocationActionsType.SEARCH_LOCATION:
       return { ...state, searchLocation: action.payload };

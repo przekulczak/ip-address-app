@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { triggerMenu } from '../../../actions/menu';
-import { ApplicationState } from '../../../reducers';
+import { ApplicationState } from '../../../reducers/types';
 import Header from '../../Common/Header';
 import {
   StyledHistoryContainer,

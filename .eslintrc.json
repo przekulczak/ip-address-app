@@ -26,6 +26,8 @@
       }
     ],
     "import/no-extraneous-dependencies": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
     "camelcase": "off",
@@ -39,7 +41,6 @@
     "no-use-before-define": "off",
     "react/function-component-definition": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "default-param-last": "off",
     "react/jsx-filename-extension": [

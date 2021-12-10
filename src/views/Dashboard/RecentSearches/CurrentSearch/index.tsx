@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import ResultContainer from '../../../../components/Layout/ResultContainer';
-import { ApplicationState } from '../../../../reducers';
+import { ApplicationState } from '../../../../reducers/types';
 import SearchMap from './SearchMap';
 import SearchResult from './SearchResult';
 

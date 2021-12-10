@@ -1,11 +1,9 @@
 import { FC } from 'react';
 import { StyledDetail, StyledDetailLabel } from './styledDetails';
 
-//to do change value type
-
 interface Props {
   label: string;
-  value: any;
+  value: string | number;
 }
 
 const Details: FC<Props> = ({ label, value }: Props) => (

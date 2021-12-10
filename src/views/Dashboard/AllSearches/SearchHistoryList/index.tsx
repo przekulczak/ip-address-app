@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { ApplicationState } from '../../../../reducers';
+import { ApplicationState } from '../../../../reducers/types';
 import StyledHistoryListItem from './SearchHistoryListItem';
 import { StyledHistorySearchList } from './styledSearchHistoryList';
 

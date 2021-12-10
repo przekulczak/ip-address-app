@@ -1,6 +1,6 @@
-import { ADD_TO_HISTORY } from '../reducers/history';
+import { HistoryActionsType } from '../reducers/history/types';
 
 export const addToHistory = (payload: string) => ({
-  type: ADD_TO_HISTORY,
+  type: HistoryActionsType.ADD_TO_HISTORY,
   payload,
 });

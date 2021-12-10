@@ -1,5 +1,4 @@
 import { Dispatch } from 'redux';
-import historyReducer from '../reducers/history';
 import { LoadingActionsType } from '../reducers/loading/types';
 import axiosInstance from './axiosConfig';
 import { history } from '../App';
@@ -25,7 +24,6 @@ export const getData = ({ dispatch, actionName, url }: GetDataType) => {
       }
     })
     .catch((response) => {
-      // to do handle api error
       console.log(response);
     })
     .then(() => {

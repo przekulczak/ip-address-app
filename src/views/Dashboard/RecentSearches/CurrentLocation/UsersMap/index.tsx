@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import Map from '../../../../../components/Common/Map';
 import ResultInnerContainer from '../../../../../components/Layout/ResultContainer/ResultInnerContainer';
-import { ApplicationState } from '../../../../../reducers';
+import { ApplicationState } from '../../../../../reducers/types';
 
 const UsersMap = () => {
   const position = useSelector((state: ApplicationState) => state.location.usersLocation);

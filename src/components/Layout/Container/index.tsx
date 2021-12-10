@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUsersLocation } from '../../../actions/location';
-import { ApplicationState } from '../../../reducers';
+import { ApplicationState } from '../../../reducers/types';
 import Spinner from '../../Common/Spinner';
 import { StyledContainer } from './styledContainer';
 

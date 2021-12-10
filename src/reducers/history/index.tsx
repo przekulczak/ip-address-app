@@ -1,27 +1,12 @@
-const ADD_TO_HISTORY = 'ADD_TO_HISTORY';
-
-export { ADD_TO_HISTORY };
-
-//TO DO MOVE TO TYPES
-
-interface AddToHistory {
-  type: 'ADD_TO_HISTORY';
-  payload: string;
-}
-
-export interface HistoryStateType {
-  history: string[];
-}
+import { HistoryActionsType, HistoryAction, HistoryStateType } from './types';
 
 const initialState: HistoryStateType = {
   history: [],
 };
 
-type Action = AddToHistory;
-
-export default (state = initialState, action: Action): HistoryStateType => {
+export default (state = initialState, action: HistoryAction): HistoryStateType => {
   switch (action.type) {
-    case ADD_TO_HISTORY:
+    case HistoryActionsType.ADD_TO_HISTORY:
       return { ...state, history: [...state.history, action.payload] };
     default:
       return state;

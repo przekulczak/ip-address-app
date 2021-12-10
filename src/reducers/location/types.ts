@@ -33,3 +33,5 @@ export interface LocationStateType {
   searchLocation: LocationResponse | null;
   loadingSearchLocation: boolean;
 }
+
+export type LocationAction = SearchLocation | LoadingSearchLocation | LoadingUsersLocation | GetUsersLocation;

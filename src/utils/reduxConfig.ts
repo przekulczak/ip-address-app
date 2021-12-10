@@ -9,7 +9,7 @@ const persistConfig = {
   storage,
   whitelist: ['history'],
 };
-const presistedReducer = persistReducer(persistConfig, reducer as any);
+const presistedReducer = persistReducer(persistConfig, reducer);
 const store = createStore(presistedReducer, applyMiddleware(thunk));
 const persistor = persistStore(store);
 export { persistor, store };

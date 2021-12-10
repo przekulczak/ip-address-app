@@ -17,7 +17,9 @@ const Search = () => {
     formState: { errors },
   } = useForm();
   const { onSubmit, validation } = useSearch();
-
+  const searchError = errors?.search && (
+    <ErrorMessage>Queries in www.*example*.com, *exmaple*.com format and ip addresses are accepted.</ErrorMessage>
+  );
   return (
     <SearchContainer>
       <Header text="Search" />
@@ -31,9 +33,7 @@ const Search = () => {
           <StyledSearchIcon />
         </StyledSearchButton>
       </StyledSearchForm>
-      {errors?.search && (
-        <ErrorMessage>Queries in www.*example*.com, *exmaple*.com format and ip addresses are accepted.</ErrorMessage>
-      )}
+      {searchError}
     </SearchContainer>
   );
 };

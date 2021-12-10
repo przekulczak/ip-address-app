@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { variables } from '../../../styleConfig/variables';
 
 export const SpinnerWrapper = styled.div`
   width: 100%;
@@ -13,9 +14,8 @@ export const StyledSpinner = styled.svg`
   margin: -25px 0 0 -25px;
   width: 200px;
   height: 200px;
-  // TO DO USE VARIABLES
   & .path {
-    stroke: #fff;
+    stroke: ${variables.colorBackgroundBox};
     stroke-linecap: round;
     animation: dash 1.5s ease-in-out infinite;
   }

@@ -5,6 +5,9 @@ export enum MenuActionsType {
 export interface TriggerMenu {
   type: MenuActionsType.TRIGGER_MENU;
 }
+
 export interface MenuStateType {
   isOpened: boolean;
 }
+
+export type MenuAction = TriggerMenu;

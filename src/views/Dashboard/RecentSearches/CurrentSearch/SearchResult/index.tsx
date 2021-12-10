@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import ResultInnerContainer from '../../../../../components/Layout/ResultContainer/ResultInnerContainer';
 import TextData from '../../../../../components/Common/TextData';
-import { ApplicationState } from '../../../../../reducers';
+import { ApplicationState } from '../../../../../reducers/types';
 
 const SearchResult = () => {
   const searchLocationData = useSelector((state: ApplicationState) => state.location.searchLocation);
