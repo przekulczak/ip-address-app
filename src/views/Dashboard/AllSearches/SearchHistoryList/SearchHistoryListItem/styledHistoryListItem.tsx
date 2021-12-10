@@ -3,10 +3,10 @@ import { variables } from '../../../../../styleConfig/variables';
 
 export const StyledHistoryListItem = styled.button`
   background: transparent;
-  margin-bottom: ${variables.mainSpacing};
+  margin-bottom: ${variables.smallSpacing};
   cursor: pointer;
   color: ${variables.colorFont};
-  padding: ${variables.mainSpacing};
+  padding: ${variables.smallSpacing};
   font-size: 1rem;
   border: none;
   display: flex;

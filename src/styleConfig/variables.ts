@@ -3,6 +3,7 @@ export const variables = {
   mainSpacing: '10px',
   smallSpacing: '5px',
   bigSpacing: '20px',
+  biggerSpacing: '40px',
   mainPadding: '10px',
   colorBackground: '#d6d6d6',
   colorBackgroundBox: '#fff',
@@ -11,4 +12,5 @@ export const variables = {
   colorBorder: '#dedede',
   borderRadius: '6px',
   colorAccent: '#1ced88',
+  headerHeight: '2rem',
 };

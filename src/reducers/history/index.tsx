@@ -2,6 +2,8 @@ const ADD_TO_HISTORY = 'ADD_TO_HISTORY';
 
 export { ADD_TO_HISTORY };
 
+//TO DO MOVE TO TYPES
+
 interface AddToHistory {
   type: 'ADD_TO_HISTORY';
   payload: string;

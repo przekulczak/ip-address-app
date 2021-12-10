@@ -1,5 +1,5 @@
 import Main from './Main';
-import Sidebar from './Sidebar';
+import HistoryContainer from './HistoryContainer';
 import Container from './Container';
 
-export default { Main, Sidebar, Container };
+export default { Main, HistoryContainer, Container };

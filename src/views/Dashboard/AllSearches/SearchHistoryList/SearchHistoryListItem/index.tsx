@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import { searchLocation } from '../../../../../actions/location';
 import { StyledHistoryListItem } from './styledHistoryListItem';
 
 interface Props {
@@ -5,7 +7,13 @@ interface Props {
 }
 
 const SearchHistoryListItem = ({ query }: Props) => {
-  return <StyledHistoryListItem>{query}</StyledHistoryListItem>;
+  const dispatch = useDispatch();
+  const handleClick = () => dispatch(searchLocation(query));
+  return (
+    <StyledHistoryListItem type="button" onClick={handleClick}>
+      {query}
+    </StyledHistoryListItem>
+  );
 };
 
 export default SearchHistoryListItem;

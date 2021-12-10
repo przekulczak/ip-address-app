@@ -1,13 +1,11 @@
 import { FC } from 'react';
-import Header from '../../../components/Common/Header';
 import SearchHistoryList from './SearchHistoryList';
-import Sidebar from '../../../components/Layout/Sidebar';
+import HistoryContainer from '../../../components/Layout/HistoryContainer';
 
 const AllSearches: FC = () => (
-  <Sidebar>
-    <Header text="History" />
+  <HistoryContainer>
     <SearchHistoryList />
-  </Sidebar>
+  </HistoryContainer>
 );
 
 export default AllSearches;

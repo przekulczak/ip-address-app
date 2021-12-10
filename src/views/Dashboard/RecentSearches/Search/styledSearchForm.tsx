@@ -23,6 +23,7 @@ export const StyledLabel = styled.label`
   padding: ${variables.bigSpacing};
 `;
 
-export const SearchParagraph = styled.p`
+export const ErrorMessage = styled.p`
   margin-top: ${variables.mainSpacing};
+  color: ${variables.colorDanger};
 `;
