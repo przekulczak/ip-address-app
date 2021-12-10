@@ -12,6 +12,6 @@ export const useSearch = () => {
     dispatch(searchLocation(search));
   };
   const validation = (value: string) =>
-    validator.isURL(value, { protocols: [], require_protocol: false }) || validator.isURL(value);
+    validator.isURL(value, { protocols: [''], require_protocol: true }) || validator.isFQDN(value);
   return { onSubmit, validation };
 };

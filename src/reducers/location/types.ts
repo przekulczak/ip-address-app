@@ -30,7 +30,7 @@ export interface LoadingUsersLocation {
 export interface LocationStateType {
   usersLocation: LocationResponse | null;
   loadingUsersLocation: boolean;
-  searchLocation: LocationResponse | null;
+  searchLocation: LocationResponse | null | 'Not found';
   loadingSearchLocation: boolean;
 }
 

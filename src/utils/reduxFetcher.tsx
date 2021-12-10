@@ -1,4 +1,5 @@
 import { Dispatch } from 'redux';
+import { toast } from 'react-toastify';
 import { LoadingActionsType } from '../reducers/loading/types';
 import axiosInstance from './axiosConfig';
 import { history } from '../App';
@@ -15,7 +16,14 @@ export const getData = ({ dispatch, actionName, url }: GetDataType) => {
     .get(`/${url}`)
     .then((response) => {
       if (response.data.success === false) {
+        toast.error('API key limit reached. Change it in the env file and run the repo locally. Or contact me :)');
         history.push('/error');
+      }
+      if (response.data.detail === 'Not Found') {
+        dispatch({
+          type: actionName,
+          payload: 'Not found',
+        });
       } else {
         dispatch({
           type: actionName,
@@ -23,8 +31,8 @@ export const getData = ({ dispatch, actionName, url }: GetDataType) => {
         });
       }
     })
-    .catch((response) => {
-      console.log(response);
+    .catch(() => {
+      history.push('/error');
     })
     .then(() => {
       dispatch({ type: LoadingActionsType.SET_LOADING, payload: false });

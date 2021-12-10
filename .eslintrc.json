@@ -25,6 +25,8 @@
         "endOfLine": "auto"
       }
     ],
+    "no-else-return": "off",
+    "react/no-unescaped-entities": "off",
     "import/no-extraneous-dependencies": "off",
     "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
