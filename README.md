@@ -8,7 +8,7 @@ Happy testing!
 
 ## Live demo
 
-Demeo is avaliable here:(http://check-that-ip.herokuapp.com/).
+Demeo is avaliable here: http://check-that-ip.herokuapp.com/
 
 ## Installation
 
