@@ -6,10 +6,6 @@ API key is in the .env file. If application will exhaust requests limit it will 
 
 Happy testing!
 
-## Live demo
-
-Demeo is avaliable here: http://check-that-ip.herokuapp.com/
-
 ## Installation
 
 I used yarn during the development process, to run this application locally use:
